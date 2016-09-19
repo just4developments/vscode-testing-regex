@@ -1,0 +1,79 @@
+{
+  "name": "testing-regex",
+  "displayName": "Testing REGEX",
+  "description": "Easy to test regex in visual code",
+  "version": "0.0.1",
+  "publisher": "just4developments",
+  "icon": "assets/logo.png",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/just4developments/vscode-testing-regex.git"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onCommand:regex.test",
+    "onCommand:regex.match",
+    "onCommand:regex.exec",
+    "onCommand:regex.default"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "regex.test",
+        "title": "REGEX Test"
+      },
+      {
+        "command": "regex.match",
+        "title": "REGEX Match"
+      },
+      {
+        "command": "regex.exec",
+        "title": "REGEX Exec"
+      },
+      {
+        "command": "regex.default",
+        "title": "REGEX default method in config"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "plaintext",
+        "path": "./snippets/regex.json"
+      }
+    ],
+    "configuration": {
+      "title": "Testing REGEX Config",
+      "type": "object",
+      "properties": {
+        "default.method": {
+          "type": "string",
+          "default": "match",
+          "description": "Value must be in ['match', 'test', 'exec']"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "regex.default",
+        "key": "alt+r"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    
+  }
+}

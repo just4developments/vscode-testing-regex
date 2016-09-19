@@ -1,0 +1,9 @@
+{
+  "regex-fomular": {
+    "prefix": "regex.fomular",
+    "body": [
+      "/${1}/g"
+    ],
+    "description": "Regex pattern, option to test (testing-regex)"
+  }
+}

@@ -1,0 +1,1 @@
+vsce package & code testing-regex
