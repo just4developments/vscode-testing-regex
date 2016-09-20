@@ -23,12 +23,13 @@ class HttpPreview {
     return this._onDidChange.event;
   }
 
-  update(rs, type, regexStr) {
+  update(rs, type, regexStr, isNewTab) {
     this.rs = rs;
     this.regexStr = regexStr;
     this.type = type;
+    if(isNewTab) HttpPreview.index++;
     this._onDidChange.fire(this.uri);
-    vscode.commands.executeCommand('vscode.previewHtml', this.uri, vscode.ViewColumn.Two, `Regex - ${type} method`);
+    vscode.commands.executeCommand('vscode.previewHtml', this.uri, vscode.ViewColumn.Two, `${HttpPreview.index}. Regex - ${type} method`);
   }
 
   toHtmlGroup(list){

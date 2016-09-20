@@ -23,7 +23,16 @@ You can change `regex.default` in user setting to use hot key (alt+r) to execute
 ### Quick command
 
 * `Alt + R` : Execute default command which is declared in user setting
+* `Ctrl + Alt + R` : Execute default command then open new tab
 * `Ctrl + Shift + P` then type `regex`: Show regex command
+
+## Example 
+
+```
+/\d/g
+thanh 28 vn
+bill 40 us
+```
 
 ## Install
 
@@ -37,7 +46,11 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.0.0
+### 0.0.2
+
+* Add new function open new tab after done
+
+### 0.0.1
 
 Initial release of Testing REGEX
 

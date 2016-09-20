@@ -2,7 +2,7 @@
   "name": "testing-regex",
   "displayName": "Testing REGEX",
   "description": "Easy to test regex in visual code",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "just4developments",
   "icon": "assets/logo.png",
   "engines": {
@@ -21,26 +21,43 @@
     "onCommand:regex.test",
     "onCommand:regex.match",
     "onCommand:regex.exec",
-    "onCommand:regex.default"
+    "onCommand:regex.default",
+    "onCommand:regex.matchNewTab",
+    "onCommand:regex.execNewTab",
+    "onCommand:regex.defaultNewTab"
+  ],
+  "keywords": [
+    "Regex",
+    "Regular",
+    "Test"
   ],
   "main": "./extension",
   "contributes": {
     "commands": [
       {
         "command": "regex.test",
-        "title": "REGEX Test"
+        "title": "Test",
+        "category": "REGEX"
       },
       {
         "command": "regex.match",
-        "title": "REGEX Match"
+        "title": "Match",
+        "category": "REGEX"
       },
       {
         "command": "regex.exec",
-        "title": "REGEX Exec"
+        "title": "Exec",
+        "category": "REGEX"
       },
       {
         "command": "regex.default",
-        "title": "REGEX default method in config"
+        "title": "Default method",
+        "category": "REGEX"
+      },
+      {
+        "command": "regex.defaultNewTab",
+        "title": "Default method (new tab)",
+        "category": "REGEX"
       }
     ],
     "snippets": [
@@ -64,6 +81,10 @@
       {
         "command": "regex.default",
         "key": "alt+r"
+      },
+      {
+        "command": "regex.defaultNewTab",
+        "key": "ctrl+alt+r"
       }
     ]
   },
